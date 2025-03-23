@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jansson
-PKG_VERSION:=2.14
-PKG_RELEASE:=3
+PKG_VERSION:=2.14.1
+PKG_RELEASE:=0
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/akheron/$(PKG_NAME)/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=c739578bf6b764aa0752db9a2fdadcfe921c78f1228c7ec0bb47fa804c55d17b
+PKG_SOURCE_URL:=https://github.com/akheron/$(PKG_NAME)/releases/download/v$(PKG_VERSION)
+PKG_HASH:=2521cd51a9641d7a4e457f7215a4cd5bb176f690bc11715ddeec483e85d9e2b3
 
 PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=LICENSE
