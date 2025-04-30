@@ -1,6 +1,6 @@
---- a/crypto/ec/ec_kmeth.c
-+++ b/crypto/ec/ec_kmeth.c
-@@ -74,12 +74,12 @@ static const EC_KEY_METHOD openssl_ec_ke
+--- a/crypto/ec/ec_key.c
++++ b/crypto/ec/ec_key.c
+@@ -774,12 +774,12 @@ static const EC_KEY_METHOD openssl_ec_ke
  	.keygen = ec_key_gen,
  	.compute_key = ecdh_compute_key,
  
@@ -17,11 +17,11 @@
 +	.verify_sig = libressl_ecdsa_verify_sig,
  };
  
- const EC_KEY_METHOD *default_ec_key_meth = &openssl_ec_key_method;
+ const EC_KEY_METHOD *
 --- a/crypto/ec/ec_local.h
 +++ b/crypto/ec/ec_local.h
-@@ -342,9 +342,9 @@ struct ec_key_method_st {
- int ec_key_gen(EC_KEY *eckey);
+@@ -240,9 +240,9 @@ struct ec_key_st {
+ int eckey_compute_pubkey(EC_KEY *eckey);
  int ecdh_compute_key(unsigned char **out, size_t *out_len,
      const EC_POINT *pub_key, const EC_KEY *ecdh);
 -int ecdsa_verify(int type, const unsigned char *dgst, int dgst_len,
