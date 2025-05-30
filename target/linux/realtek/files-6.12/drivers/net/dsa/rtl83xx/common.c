@@ -1159,7 +1159,7 @@ static int rtl83xx_netevent_event(struct notifier_block *this,
 	struct rtl838x_switch_priv *priv;
 	struct net_device *dev;
 	struct neighbour *n = ptr;
-	int err, port;
+	int err = 0, port;
 	struct net_event_work *net_work;
 
 	priv = container_of(this, struct rtl838x_switch_priv, ne_nb);
