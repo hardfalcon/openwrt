@@ -57,7 +57,7 @@ LD		:= $(CROSS_COMPILE)ld
 OBJCOPY		:= $(CROSS_COMPILE)objcopy
 OBJDUMP		:= $(CROSS_COMPILE)objdump
 
-CFLAGS		= -fpic -mabicalls -O2 -fno-builtin-printf -Iinclude
+CFLAGS		= -fpic -mabicalls -O2 -fno-builtin-printf -fno-stack-protector -Iinclude
 CFLAGS		+= -DFLASH_ADDR=$(FLASH_ADDR)
 
 ASFLAGS		= -fpic -msoft-float -Iinclude
