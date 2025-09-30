@@ -1,0 +1,10 @@
+diff --git a/lua/CMakeLists.txt b/lua/CMakeLists.txt
+index 96b122aa5029..750c8c46382d 100644
+--- a/lua/CMakeLists.txt
++++ b/lua/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 2.6...3.5)
+ 
+ PROJECT(uci C)
+ 

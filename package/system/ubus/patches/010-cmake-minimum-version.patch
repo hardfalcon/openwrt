@@ -1,0 +1,20 @@
+diff --git a/lua/CMakeLists.txt b/lua/CMakeLists.txt
+index e4821bf7fa4f..894c507b218d 100644
+--- a/lua/CMakeLists.txt
++++ b/lua/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 2.6...3.5)
+ 
+ PROJECT(ubus C)
+ 
+diff --git a/examples/CMakeLists.txt b/examples/CMakeLists.txt
+index 81f999752950..c8fc208e1ec2 100644
+--- a/examples/CMakeLists.txt
++++ b/examples/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 2.6...3.5)
+ 
+ ADD_DEFINITIONS(-I..)
+ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/..)

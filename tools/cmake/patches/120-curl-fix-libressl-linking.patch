@@ -20,11 +20,10 @@ Signed-off-by: Jo-Philipp Wich <jo@mein.io>
 ---
 --- a/Utilities/cmcurl/CMakeLists.txt
 +++ b/Utilities/cmcurl/CMakeLists.txt
-@@ -775,7 +775,14 @@ if(CURL_USE_OPENSSL)
-   endif()
+@@ -997,6 +997,15 @@ if(CURL_USE_OPENSSL)
    set(_ssl_enabled ON)
    set(USE_OPENSSL ON)
--
+ 
 +  check_library_exists("rt" clock_gettime "" HAVE_LIBRT)
 +  if(HAVE_LIBRT)
 +    list(APPEND OPENSSL_LIBRARIES rt)
@@ -33,6 +32,7 @@ Signed-off-by: Jo-Philipp Wich <jo@mein.io>
 +  if(HAVE_PTHREAD)
 +    list(APPEND OPENSSL_LIBRARIES pthread)
 +  endif()
-   list(APPEND CURL_LIBS ${OPENSSL_LIBRARIES})
-   include_directories(${OPENSSL_INCLUDE_DIR})
-   list(APPEND LIBCURL_PC_REQUIRES_PRIVATE "openssl")
++
+   # Depend on OpenSSL via imported targets. This allows our dependents to
+   # get our dependencies transitively.
+   list(APPEND CURL_LIBS OpenSSL::SSL OpenSSL::Crypto)
