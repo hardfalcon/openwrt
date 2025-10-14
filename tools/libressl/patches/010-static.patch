@@ -20,7 +20,7 @@
  const EC_KEY_METHOD *
 --- a/crypto/ec/ec_local.h
 +++ b/crypto/ec/ec_local.h
-@@ -240,9 +240,9 @@ struct ec_key_st {
+@@ -253,9 +253,9 @@ struct ec_key_st {
  int eckey_compute_pubkey(EC_KEY *eckey);
  int ecdh_compute_key(unsigned char **out, size_t *out_len,
      const EC_POINT *pub_key, const EC_KEY *ecdh);
