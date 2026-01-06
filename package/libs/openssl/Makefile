@@ -254,6 +254,10 @@ ifndef CONFIG_OPENSSL_WITH_TLS11
   OPENSSL_OPTIONS += no-tls1_1 no-tls1_1-method
 endif
 
+ifndef CONFIG_OPENSSL_WITH_TLS12
+  OPENSSL_OPTIONS += no-tls1_2 no-tls1_2-method
+endif
+
 ifndef CONFIG_OPENSSL_WITH_TLS13
   OPENSSL_OPTIONS += no-tls1_3
 endif
