@@ -3,12 +3,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=corrosion
-PKG_VERSION:=0.5.1
-PKG_RELEASE:=1
+PKG_VERSION:=0.6.1
+PKG_RELEASE:=0
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/corrosion-rs/corrosion/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=843334a9f0f5efbc225dccfa88031fe0f2ec6fd787ca1e7d55ed27b2c25d9c97
+PKG_HASH:=e9e95b1ee2bad52681f347993fb1a5af5cce458c5ce8a2636c9e476e4babf8e3
 
 CMAKE_BINARY_SUBDIR:=build
 
