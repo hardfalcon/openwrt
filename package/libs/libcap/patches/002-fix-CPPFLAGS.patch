@@ -4,7 +4,7 @@ CPPFLAGS.
 
 --- a/Make.Rules
 +++ b/Make.Rules
-@@ -83,7 +83,7 @@ WARNINGS=-Wall -Wwrite-strings -Wpointer
+@@ -82,7 +82,7 @@ WARNINGS=-Wall -Wwrite-strings -Wpointer
  COPTS ?= -O2
  CFLAGS ?= $(COPTS) $(DEBUG)
  CFLAGS += $(WARNINGS)
