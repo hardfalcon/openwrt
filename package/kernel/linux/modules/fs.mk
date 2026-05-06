@@ -499,7 +499,8 @@ define KernelPackage/fs-nfs-common-rpcsec
 	+kmod-crypto-sha256 \
 	+kmod-crypto-sha512 \
 	+kmod-crypto-cbc \
-	+kmod-crypto-cts
+	+kmod-crypto-cts \
+	+kmod-crypto-ecb
   KCONFIG:= \
 	CONFIG_SUNRPC_GSS \
 	CONFIG_RPCSEC_GSS_KRB5
