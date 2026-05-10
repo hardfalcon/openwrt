@@ -9,10 +9,10 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=expat
 PKG_CPE_ID:=cpe:/a:libexpat_project:libexpat
-PKG_VERSION:=2.8.0
+PKG_VERSION:=2.8.1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_HASH:=c7cec5f60ea3a42e7780781c6745255c19aa3dbfeeae58646b7132f88dc24780
+PKG_HASH:=a52eb72108be160e190b5cafa5bba8663f1313f2013e26060d1c18e26e31067b
 PKG_SOURCE_URL:=https://github.com/libexpat/libexpat/releases/download/R_$(subst .,_,$(PKG_VERSION))
 
 HOST_BUILD_PARALLEL:=1
