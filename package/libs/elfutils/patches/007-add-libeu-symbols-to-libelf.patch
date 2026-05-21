@@ -19,9 +19,9 @@ Signed-off-by: Mark Wielaard <mark@klomp.org>
 
 --- a/libelf/Makefile.am
 +++ b/libelf/Makefile.am
-@@ -122,6 +122,9 @@ libelf.so: $(srcdir)/libelf.map $(libelf
- 	@$(textrel_check)
- 	$(AM_V_at)ln -fs $@ $@.$(VERSION)
+@@ -126,6 +126,9 @@ libelf.so: $(srcdir)/libelf.map $(libelf
+ libeu_objects = $(shell cat ../lib/libeu.manifest)
+ libelf_a_LIBADD = $(addprefix ../lib/,$(libeu_objects))
  
 +libeu_objects = $(shell $(AR) t ../lib/libeu.a)
 +libelf_a_LIBADD = $(addprefix ../lib/,$(libeu_objects))
