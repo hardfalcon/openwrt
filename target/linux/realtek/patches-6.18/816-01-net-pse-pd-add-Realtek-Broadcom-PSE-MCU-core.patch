@@ -42,7 +42,7 @@ Signed-off-by: Jonas Jelonek <jelonek.jonas@gmail.com>
 
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -21680,6 +21680,13 @@ S:	Maintained
+@@ -21685,6 +21685,13 @@ S:	Maintained
  F:	include/sound/rt*.h
  F:	sound/soc/codecs/rt*
  
